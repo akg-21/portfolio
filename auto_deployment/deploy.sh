@@ -1,12 +1,8 @@
 #!/bin/bash
-
 cd /var/www/portfolio
+git fetch --all
+git reset --hard origin/main
 
-echo "Pulling latest changes..."
-git pull
-
-echo "Setting permissions..."
+# Set correct permissions (optional)
 chown -R www-data:www-data /var/www/portfolio
 chmod -R 755 /var/www/portfolio
-
-echo "Deployment complete!"
