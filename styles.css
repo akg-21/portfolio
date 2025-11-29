@@ -93,19 +93,47 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding: 120px 0 60px;
     background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
 }
 
 .hero-content {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+    border: 3px solid rgba(99, 102, 241, 0.2);
+    transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+.hero-text {
+    text-align: left;
 }
 
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: 800;
+    line-height: 1.2;
 }
 
 .highlight {
@@ -113,6 +141,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .hero-subtitle {
@@ -132,7 +162,7 @@ body {
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 2rem;
 }
 
@@ -169,7 +199,7 @@ body {
 .social-links {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .social-link {
@@ -607,6 +637,10 @@ section {
         font-size: 2.5rem;
     }
 
+    .highlight {
+        white-space: normal;
+    }
+
     .hero-subtitle {
         font-size: 1.5rem;
     }
@@ -615,14 +649,37 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .hero-buttons .btn {
         width: 100%;
         max-width: 300px;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 
     .section-title {
@@ -633,6 +690,10 @@ section {
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
+    }
+
+    .highlight {
+        white-space: normal;
     }
 
     .hero-subtitle {
