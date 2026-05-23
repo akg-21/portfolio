@@ -31,6 +31,7 @@
       <a data-section="exp">experience</a>
       <a data-section="edu">education</a>
       <a data-section="projects">projects</a>
+      <a data-section="github">github</a>
       <a data-section="contact">contact</a>
     </div>
   </nav>
@@ -381,10 +382,23 @@
     </div>
   </section>
 
+  <!-- ── GITHUB ACTIVITY ──────────────────────────────── -->
+  <section id="github">
+    <div class="sec-header fade-in">
+      <div class="sec-num">05</div>
+      <div class="sec-title">// GITHUB ACTIVITY</div>
+      <div class="sec-line"></div>
+    </div>
+
+    <div id="gh-root" class="fade-in">
+      <div class="loading" id="gh-loading"><span class="loading-dots">Fetching GitHub data</span></div>
+    </div>
+  </section>
+
   <!-- ── CONTACT ─────────────────────────────────────── -->
   <section id="contact">
     <div class="sec-header fade-in">
-      <div class="sec-num">04</div>
+      <div class="sec-num">06</div>
       <div class="sec-title">// CONTACT</div>
       <div class="sec-line"></div>
     </div>
@@ -421,25 +435,45 @@
     </div>
   </section>
 
-  <!-- ── TERMINAL FOOTER ─────────────────────────────── -->
-  <div class="terminal-footer fade-in term-typed">
-    <div class="terminal-body">
-      <div class="term-line">
-        <span class="prompt">ajay@portfolio:~$</span>&nbsp;
-        <span class="cmd">whoami</span>
+  <!-- ── INTERACTIVE TERMINAL ─────────────────────────── -->
+  <div class="terminal-footer terminal-interactive fade-in" id="interactive-terminal">
+    <!-- Window chrome -->
+    <div class="term-chrome">
+      <div class="term-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
       </div>
-      <div class="term-line output">Full Stack Developer | Backend &middot; DevOps &middot; Laravel &middot; Node.js &middot; MySQL</div>
+      <div class="term-title">ajay@portfolio: ~</div>
+      <div class="term-badge">bash</div>
+    </div>
 
-      <div class="term-line" style="margin-top:.8rem">
-        <span class="prompt">ajay@portfolio:~$</span>&nbsp;
-        <span class="cmd">echo &quot;Backend-first. DevOps-aware. Open to work!&quot;</span>&nbsp;
-        <span style="color:var(--neon)">&#9608;</span>
-      </div>
+    <!-- Output history -->
+    <div class="term-history" id="term-history"></div>
+
+    <!-- Input row -->
+    <div class="term-input-row" id="term-input-row">
+      <span class="prompt">ajay@portfolio:~$</span>
+      <input
+        type="text"
+        id="term-input"
+        class="term-input"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        placeholder="type a command..."
+        aria-label="Terminal input"
+      />
     </div>
   </div>
 
 </div><!-- /.port -->
 
+<!-- Tooltip for heatmap -->
+<div class="tooltip" id="gh-tooltip"></div>
+
 <script src="script.js"></script>
+<script src="github.js"></script>
 </body>
 </html>
