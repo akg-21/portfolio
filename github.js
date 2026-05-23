@@ -3,7 +3,7 @@
    ───────────────────────────────────────────────── */
 
 (function GitHubActivity() {
-  const TOKEN = '12345555';
+  const BACKEND_URL = 'https://portfolio-backend-ten-zeta.vercel.app/api/github';
   const USERNAME = 'akg-21';
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const LANG_COLORS = {
@@ -23,42 +23,45 @@
 
   if (!root) return;
 
-  // ── Fetch user + repos (once) ─────────────────────
+  // ── Fetch user + repos via backend proxy (once) ─────
   async function fetchUser() {
-    const [uRes, rRes] = await Promise.all([
-      fetch(`https://api.github.com/users/${USERNAME}`, {
-        headers: { Authorization: `token ${TOKEN}` }
-      }),
-      fetch(`https://api.github.com/users/${USERNAME}/repos?per_page=6&sort=updated`, {
-        headers: { Authorization: `token ${TOKEN}` }
-      })
-    ]);
-    userData = await uRes.json();
-    reposData = await rRes.json();
+    const res = await fetch(BACKEND_URL);
+    const json = await res.json();
+    const u = json.data.user;
+
+    // Map to the shape the render functions expect
+    userData = {
+      login:        USERNAME,
+      name:         u.name,
+      bio:          u.bio,
+      avatar_url:   u.avatarUrl,
+      public_repos: u.repositories.nodes.length,
+      followers:    0,
+      following:    0
+    };
+
+    // Map GraphQL repo nodes → REST-like shape for buildRepos()
+    reposData = u.repositories.nodes.map(r => ({
+      name:             r.name,
+      description:      r.description,
+      html_url:         r.url,
+      stargazers_count: r.stargazerCount,
+      forks_count:      r.forkCount || 0,
+      language:         r.primaryLanguage?.name || null,
+      _langColor:       r.primaryLanguage?.color || null
+    }));
+
+    // Cache the current-year calendar from this response
+    const cal = u.contributionsCollection?.contributionCalendar;
+    if (cal) contribCache[currentYear] = cal;
   }
 
-  // ── Fetch contribution calendar (cached per year) ─
+  // ── Fetch contribution calendar via backend proxy (cached per year) ─
   async function fetchContribs(year) {
     if (contribCache[year]) return contribCache[year];
-    const from = `${year}-01-01T00:00:00Z`;
-    const to = `${year}-12-31T23:59:59Z`;
-    const res = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: { Authorization: `bearer ${TOKEN}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        query: `{
-        user(login: "${USERNAME}") {
-          contributionsCollection(from: "${from}", to: "${to}") {
-            contributionCalendar {
-              totalContributions
-              weeks { contributionDays { contributionCount date } }
-            }
-          }
-        }
-      }` })
-    });
-    const data = await res.json();
-    const cal = data.data.user.contributionsCollection.contributionCalendar;
+    const res = await fetch(`${BACKEND_URL}?year=${year}`);
+    const json = await res.json();
+    const cal = json.data.user.contributionsCollection.contributionCalendar;
     contribCache[year] = cal;
     return cal;
   }
@@ -133,7 +136,7 @@
   // ── Build repos grid HTML ─────────────────────────
   function buildRepos(repos) {
     const cards = (Array.isArray(repos) ? repos : []).slice(0, 6).map(r => {
-      const lc = LANG_COLORS[r.language] || '#00ffe7';
+      const lc = r._langColor || LANG_COLORS[r.language] || '#00ffe7';
       return `
         <div class="repo-card" onclick="openLink('${r.html_url}')">
           <div class="repo-name">
