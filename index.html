@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ajay Krishnan G — Full Stack Developer | Backend &amp; DevOps</title>
-  <meta name="description" content="Portfolio of Ajay Krishnan G — Full Stack Developer specializing in backend engineering and DevOps. Expert in Laravel, Yii2, Node.js, MySQL, AWS, and Linux server administration. Open to opportunities." />
+  <meta name="description"
+    content="Portfolio of Ajay Krishnan G — Full Stack Developer specializing in backend engineering and DevOps. Expert in Laravel, Yii2, Node.js, MySQL, AWS, and Linux server administration. Open to opportunities." />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -14,484 +16,499 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 </head>
+
 <body>
 
-<!-- Scanline overlay -->
-<div class="scanlines"></div>
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
 
-<!-- Animated grid background -->
-<canvas id="grid-canvas"></canvas>
+  <!-- Animated grid background -->
+  <canvas id="grid-canvas"></canvas>
 
-<!-- Scroll to top -->
-<button id="scroll-top" aria-label="Scroll to top">
-  <i class="ti ti-arrow-up"></i>
-</button>
+  <!-- Scroll to top -->
+  <button id="scroll-top" aria-label="Scroll to top">
+    <i class="ti ti-arrow-up"></i>
+  </button>
 
-<div class="port" id="top">
+  <div class="port" id="top">
 
-  <!-- ── NAV ─────────────────────────────────────── -->
-  <nav>
-    <div class="nav-logo">akg-21</div>
-    <div class="nav-links">
-      <a data-section="skills">skills</a>
-      <a data-section="exp">experience</a>
-      <a data-section="edu">education</a>
-      <a data-section="projects">projects</a>
-      <a data-section="github">github</a>
-      <a data-section="contact">contact</a>
-    </div>
-  </nav>
-
-  <!-- ── HERO ──────────────────────────────────────── -->
-  <div class="hero">
-    <div class="hero-layout">
-
-      <!-- Profile photo with corner frame -->
-      <div class="hero-photo-col">
-        <div class="photo-frame">
-          <img src="ajay.jpeg" alt="Ajay Krishnan G — Full Stack Developer" class="hero-photo" />
-        </div>
+    <!-- ── NAV ─────────────────────────────────────── -->
+    <nav>
+      <div class="nav-logo">akg-21</div>
+      <div class="nav-links">
+        <a data-section="skills">skills</a>
+        <a data-section="exp">experience</a>
+        <a data-section="edu">education</a>
+        <a data-section="projects">projects</a>
+        <a data-section="github">github</a>
+        <a data-section="contact">contact</a>
       </div>
+    </nav>
 
-      <!-- Text content -->
-      <div class="hero-text-col">
-        <div class="hero-badge">// available for opportunities</div>
-        <div class="hero-name">AJAY<span>KRISHNAN</span><br>G</div>
-        <div class="hero-typed" id="typed-text"><span class="cursor-blink"></span></div>
-        <div class="hero-desc">
-          Full Stack Developer with a strong focus on <span class="hero-accent">backend engineering &amp; DevOps</span>.
-          Building scalable APIs, optimized databases, and robust server infrastructure &mdash;
-          2+ years shipping clean, maintainable solutions across Laravel, Node.js, Python &amp; more.
-        </div>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="mailto:ajaykrishnan.g21@gmail.com">$ contact --me</a>
-          <a class="btn btn-ghost" href="https://linkedin.com/in/ajaykg21" target="_blank" rel="noopener">$ view --linkedin</a>
-        </div>
-      </div>
-    </div>
+    <!-- ── HERO ──────────────────────────────────────── -->
+    <div class="hero">
+      <div class="hero-layout">
 
-    <!-- Stats -->
-    <div class="hero-stats">
-      <div class="stat-box">
-        <div class="stat-num" id="cnt1">0</div>
-        <div class="stat-lbl">YEARS EXP</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="cnt2">0</div>
-        <div class="stat-lbl">PERSONAL PROJECTS</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="cnt3">0</div>
-        <div class="stat-lbl">TECH STACK</div>
-      </div>
-    </div>
-  </div>
+        <!-- Profile photo with corner frame -->
+        <div class="hero-photo-col">
+          <div class="photo-frame">
+            <img src="ajay.jpeg" alt="Ajay Krishnan G — Full Stack Developer" class="hero-photo" />
+          </div>
+        </div>
 
-  <!-- ── SKILLS ─────────────────────────────────────── -->
-  <section id="skills">
-    <div class="sec-header fade-in">
-      <div class="sec-num">01</div>
-      <div class="sec-title">// TECH STACK</div>
-      <div class="sec-line"></div>
-    </div>
-
-    <div class="skills-grid fade-in">
-      <!-- Column 1: Backend & Frameworks -->
-      <div>
-        <div class="skill-group-label">// BACKEND &amp; FRAMEWORKS</div>
-        <div class="skill-item">
-          <div class="skill-header"><span>Laravel / PHP</span><span class="skill-pct">92%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="92"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span>Yii2</span><span class="skill-pct">82%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="82"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span>Node.js / Express</span><span class="skill-pct">76%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="76"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span>Spring Boot / Java</span><span class="skill-pct">70%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="70"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span>REST API / MVC</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="90"></div></div>
-        </div>
-      </div>
-      <!-- Column 2: Database, DevOps & Tools -->
-      <div>
-        <div class="skill-group-label">// DATABASE, DEVOPS &amp; TOOLS</div>
-        <div class="skill-item">
-          <div class="skill-header"><span>MySQL</span><span class="skill-pct">88%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="88"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span>Linux / Server Admin</span><span class="skill-pct">78%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="78"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span>AWS</span><span class="skill-pct">65%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="65"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span>Git / Bitbucket</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="85"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span>Python</span><span class="skill-pct">72%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="72"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── EXPERIENCE ──────────────────────────────────── -->
-  <section id="exp">
-    <div class="sec-header fade-in">
-      <div class="sec-num">02</div>
-      <div class="sec-title">// EXPERIENCE</div>
-      <div class="sec-line"></div>
-    </div>
-
-    <div class="timeline">
-      <!-- Job 1 -->
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-role">Full Stack Developer</div>
-          <div class="tl-company">Saiha Software Technologies Pvt. Ltd &mdash; Kochi</div>
-          <div class="tl-date">2024 &mdash; PRESENT</div>
-          <ul class="tl-points">
-            <li>Designed &amp; developed RESTful APIs and backend logic using Laravel and Yii2 to enhance system scalability and performance</li>
-            <li>Built and optimized MySQL databases to handle high data volumes efficiently</li>
-            <li>Applied MVC architecture to ensure clean, maintainable, and modular code across multiple client projects</li>
-            <li>Conducted R&amp;D to explore new frameworks, tools, and optimization techniques for improved system performance and automation</li>
-            <li>Collaborated with designers and QA engineers to deliver secure, responsive, and high-performing web applications</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Laravel</span>
-            <span class="tag">Yii2</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">REST API</span>
-            <span class="tag">MVC</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Python</span>
+        <!-- Text content -->
+        <div class="hero-text-col">
+          <div class="hero-badge">// available for opportunities</div>
+          <div class="hero-name">AJAY<span>KRISHNAN</span><br>G</div>
+          <div class="hero-typed" id="typed-text"><span class="cursor-blink"></span></div>
+          <div class="hero-desc">
+            Full Stack Developer with a strong focus on <span class="hero-accent">backend engineering &amp;
+              DevOps</span>.
+            Building scalable APIs, optimized databases, and robust server infrastructure &mdash;
+            2+ years shipping clean, maintainable solutions across Laravel, Node.js, Python &amp; more.
+          </div>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:ajaykrishnan.g21@gmail.com">$ contact --me</a>
+            <a class="btn btn-ghost" href="https://linkedin.com/in/ajaykg21" target="_blank" rel="noopener">$ view
+              --linkedin</a>
           </div>
         </div>
       </div>
 
-      <!-- Job 2 -->
-      <div class="tl-item">
-        <div class="tl-dot" style="background:var(--neon2);box-shadow:0 0 10px var(--neon2),0 0 20px rgba(123,47,255,.3)"></div>
-        <div class="tl-card">
-          <div class="tl-role">Full Stack Web Developer</div>
-          <div class="tl-company">Freelance</div>
-          <div class="tl-date">2022 &mdash; 2024</div>
-          <ul class="tl-points">
-            <li>Designed and developed custom web applications for clients using Laravel, PHP, and JSP</li>
-            <li>Managed full deployment cycle &mdash; from development to server configuration, hosting, and maintenance</li>
-            <li>Managed and optimized MySQL databases for efficient data handling and performance</li>
-            <li>Delivered high-quality, responsive web solutions tailored to client requirements</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">JSP</span>
-            <span class="tag">PHP</span>
-            <span class="tag">Laravel</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Web Hosting</span>
-            <span class="tag">MVC</span>
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-box">
+          <div class="stat-num" id="cnt1">0</div>
+          <div class="stat-lbl">YEARS EXP</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="cnt2">0</div>
+          <div class="stat-lbl">PERSONAL PROJECTS</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="cnt3">0</div>
+          <div class="stat-lbl">TECH STACK</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SKILLS ─────────────────────────────────────── -->
+    <section id="skills">
+      <div class="sec-header fade-in">
+        <div class="sec-num">01</div>
+        <div class="sec-title">// TECH STACK</div>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="skills-grid fade-in">
+        <!-- Column 1: Backend & Frameworks -->
+        <div>
+          <div class="skill-group-label">// BACKEND &amp; FRAMEWORKS</div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Laravel / PHP</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-neon" data-w="92"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Yii2</span><span class="skill-pct">82%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-neon" data-w="82"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Node.js / Express</span><span class="skill-pct">76%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-neon" data-w="76"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Spring Boot / Java</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-neon" data-w="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>REST API / MVC</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-neon" data-w="90"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Column 2: Database, DevOps & Tools -->
+        <div>
+          <div class="skill-group-label">// DATABASE, DEVOPS &amp; TOOLS</div>
+          <div class="skill-item">
+            <div class="skill-header"><span>MySQL</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-pink" data-w="88"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Linux / Server Admin</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-pink" data-w="78"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>AWS</span><span class="skill-pct">65%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-pink" data-w="65"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Git / Bitbucket</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-pink" data-w="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Python</span><span class="skill-pct">72%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar bar-pink" data-w="72"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── EDUCATION ────────────────────────────────────── -->
-  <section id="edu">
-    <div class="sec-header fade-in">
-      <div class="sec-num">03</div>
-      <div class="sec-title">// EDUCATION</div>
-      <div class="sec-line"></div>
-    </div>
+    <!-- ── EXPERIENCE ──────────────────────────────────── -->
+    <section id="exp">
+      <div class="sec-header fade-in">
+        <div class="sec-num">02</div>
+        <div class="sec-title">// EXPERIENCE</div>
+        <div class="sec-line"></div>
+      </div>
 
-    <div class="timeline">
-      <!-- MSc -->
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-role">Master of Science &mdash; Computer Science with Data Analytics</div>
-          <div class="tl-company">Rajagiri College of Social Sciences (Autonomous) &mdash; Kochi, Kerala</div>
-          <div class="tl-date">2022 &mdash; 2024 &nbsp;|&nbsp; CGPA: 6.5 / 10</div>
-          <ul class="tl-points">
-            <li>Specialization in Data Analytics &amp; Machine Learning</li>
-            <li>Research projects on AI-integrated web systems and deep learning</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Data Analytics</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Python</span>
-            <span class="tag">Deep Learning</span>
+      <div class="timeline">
+        <!-- Job 1 -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-role">Full Stack Developer</div>
+            <div class="tl-company">Saiha Software Technologies Pvt. Ltd &mdash; Kochi</div>
+            <div class="tl-date">2024 &mdash; PRESENT</div>
+            <ul class="tl-points">
+              <li>Designed &amp; developed RESTful APIs and backend logic using Laravel and Yii2 to enhance system
+                scalability and performance</li>
+              <li>Built and optimized MySQL databases to handle high data volumes efficiently</li>
+              <li>Applied MVC architecture to ensure clean, maintainable, and modular code across multiple client
+                projects</li>
+              <li>Conducted R&amp;D to explore new frameworks, tools, and optimization techniques for improved system
+                performance and automation</li>
+              <li>Collaborated with designers and QA engineers to deliver secure, responsive, and high-performing web
+                applications</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">Yii2</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">REST API</span>
+              <span class="tag">MVC</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="tl-item">
+          <div class="tl-dot"
+            style="background:var(--neon2);box-shadow:0 0 10px var(--neon2),0 0 20px rgba(123,47,255,.3)"></div>
+          <div class="tl-card">
+            <div class="tl-role">Full Stack Web Developer</div>
+            <div class="tl-company">Freelance</div>
+            <div class="tl-date">2022 &mdash; 2024</div>
+            <ul class="tl-points">
+              <li>Designed and developed custom web applications for clients using Laravel, PHP, and JSP</li>
+              <li>Managed full deployment cycle &mdash; from development to server configuration, hosting, and
+                maintenance</li>
+              <li>Managed and optimized MySQL databases for efficient data handling and performance</li>
+              <li>Delivered high-quality, responsive web solutions tailored to client requirements</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">JSP</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Web Hosting</span>
+              <span class="tag">MVC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ────────────────────────────────────── -->
+    <section id="edu">
+      <div class="sec-header fade-in">
+        <div class="sec-num">03</div>
+        <div class="sec-title">// EDUCATION</div>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="timeline">
+        <!-- MSc -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-role">Master of Science &mdash; Computer Science with Data Analytics</div>
+            <div class="tl-company">Rajagiri College of Social Sciences (Autonomous) &mdash; Kochi, Kerala</div>
+            <div class="tl-date">2022 &mdash; 2024 &nbsp;|&nbsp; CGPA: 6.5 / 10</div>
+            <ul class="tl-points">
+              <li>Specialization in Data Analytics &amp; Machine Learning</li>
+              <li>Research projects on AI-integrated web systems and deep learning</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Data Analytics</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Python</span>
+              <span class="tag">Deep Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BCA -->
+        <div class="tl-item">
+          <div class="tl-dot"
+            style="background:var(--neon2);box-shadow:0 0 10px var(--neon2),0 0 20px rgba(123,47,255,.3)"></div>
+          <div class="tl-card">
+            <div class="tl-role">Bachelor of Computer Application</div>
+            <div class="tl-company">Mar Kuriakose Arts &amp; Science College &mdash; Kottayam, Kerala</div>
+            <div class="tl-date">2019 &mdash; 2022 &nbsp;|&nbsp; CGPA: 7.1 / 10</div>
+            <ul class="tl-points">
+              <li>Core coursework in Java, PHP, JSP, and Web Application Development</li>
+              <li>Built foundational projects in computer applications and database management</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">PHP</span>
+              <span class="tag">JSP</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ────────────────────────────────────── -->
+    <section id="projects">
+      <div class="sec-header fade-in">
+        <div class="sec-num">04</div>
+        <div class="sec-title">// PROJECTS</div>
+        <div class="sec-line"></div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="proj-filters fade-in" id="proj-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="mobile">Mobile / Health</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- 1. Career Compass V2 -->
+        <div class="proj-card" data-cat="fullstack">
+          <div class="proj-card-top">
+            <div class="proj-cat-badge fullstack-badge">Full Stack</div>
+            <div class="proj-links">
+              <a href="https://github.com/akg-21/career_compass_v2_backend" target="_blank" rel="noopener"
+                class="proj-link" title="Backend Repo"><i class="ti ti-brand-github"></i></a>
+              <a href="https://github.com/akg-21/career_compass__v2_frontend" target="_blank" rel="noopener"
+                class="proj-link" title="Frontend Repo"><i class="ti ti-external-link"></i></a>
+            </div>
+          </div>
+          <div class="proj-icon"><i class="ti ti-compass" aria-hidden="true"></i></div>
+          <div class="proj-name">Career Compass V2</div>
+          <div class="proj-desc">AI-powered career guidance &amp; job platform with separate frontend/backend
+            architecture. Features authentication, job matching, and scalable REST APIs for real-world use.</div>
+          <div class="proj-tags">
+            <span class="ptag">React</span>
+            <span class="ptag">Node.js</span>
+            <span class="ptag">REST API</span>
+            <span class="ptag">Auth</span>
+            <span class="ptag">MySQL</span>
+          </div>
+          <div class="proj-stack">React &middot; Node.js &middot; Express &middot; MySQL</div>
+        </div>
+
+        <!-- 2. Smart Waste Management + AI -->
+        <div class="proj-card" data-cat="ai">
+          <div class="proj-card-top">
+            <div class="proj-cat-badge ai-badge">AI / ML</div>
+            <div class="proj-links">
+              <a href="https://github.com/akg-21/waste_management_and-_complaints_with_severity_laravel_python"
+                target="_blank" rel="noopener" class="proj-link" title="Main Repo"><i
+                  class="ti ti-brand-github"></i></a>
+              <a href="https://github.com/akg-21/Deep_Learning_project_Waste_Management" target="_blank" rel="noopener"
+                class="proj-link" title="DL Model Repo"><i class="ti ti-external-link"></i></a>
+            </div>
+          </div>
+          <div class="proj-icon"><i class="ti ti-leaf" aria-hidden="true"></i></div>
+          <div class="proj-name">Smart Waste Management</div>
+          <div class="proj-desc">AI-integrated civic tech system for complaint severity prediction using deep learning.
+            Laravel + Python hybrid architecture solves real-world waste management at scale.</div>
+          <div class="proj-tags">
+            <span class="ptag">Laravel</span>
+            <span class="ptag">Python</span>
+            <span class="ptag">Deep Learning</span>
+            <span class="ptag">NLP</span>
+            <span class="ptag">REST API</span>
+          </div>
+          <div class="proj-stack">Laravel &middot; Python &middot; TensorFlow &middot; MySQL</div>
+        </div>
+
+        <!-- 4. Fall Detection / Health Monitoring -->
+        <div class="proj-card" data-cat="mobile">
+          <div class="proj-card-top">
+            <div class="proj-cat-badge mobile-badge">AI + Health</div>
+            <div class="proj-links">
+              <a href="https://github.com/akg-21/health_app_backend" target="_blank" rel="noopener" class="proj-link"
+                title="Backend Repo"><i class="ti ti-brand-github"></i></a>
+              <a href="https://github.com/akg-21/health_app_frontend" target="_blank" rel="noopener" class="proj-link"
+                title="Frontend Repo"><i class="ti ti-external-link"></i></a>
+            </div>
+          </div>
+          <div class="proj-icon"><i class="ti ti-heartbeat" aria-hidden="true"></i></div>
+          <div class="proj-name">Fall Detection &amp; Health Monitor</div>
+          <div class="proj-desc">Real-time AI health monitoring system with fall detection via camera/sensor
+            integration. Sends instant alerts, tracks vitals, and provides a responsive frontend dashboard.</div>
+          <div class="proj-tags">
+            <span class="ptag">Node.js</span>
+            <span class="ptag">Python AI</span>
+            <span class="ptag">Real-time</span>
+            <span class="ptag">Alerts</span>
+            <span class="ptag">Camera API</span>
+          </div>
+          <div class="proj-stack">Node.js &middot; Python &middot; WebSockets &middot; AI</div>
+        </div>
+
+        <!-- 5. Spring Boot E-Commerce -->
+        <div class="proj-card" data-cat="backend">
+          <div class="proj-card-top">
+            <div class="proj-cat-badge backend-badge">Enterprise Java</div>
+            <div class="proj-links">
+              <a href="https://github.com/akg-21/Spring-Boot-Ecom" target="_blank" rel="noopener" class="proj-link"
+                title="View Repo"><i class="ti ti-brand-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-icon"><i class="ti ti-shopping-cart" aria-hidden="true"></i></div>
+          <div class="proj-name">Spring Boot E-Commerce</div>
+          <div class="proj-desc">Enterprise-grade Java e-commerce application with JWT authentication, complete
+            product/order CRUD, and optimized REST APIs backed by MySQL — built with Spring Boot best practices.</div>
+          <div class="proj-tags">
+            <span class="ptag">Spring Boot</span>
+            <span class="ptag">Java</span>
+            <span class="ptag">JWT Auth</span>
+            <span class="ptag">REST API</span>
+            <span class="ptag">MySQL</span>
+          </div>
+          <div class="proj-stack">Spring Boot &middot; Java &middot; MySQL &middot; REST</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── GITHUB ACTIVITY ──────────────────────────────── -->
+    <section id="github">
+      <div class="sec-header fade-in">
+        <div class="sec-num">05</div>
+        <div class="sec-title">// GITHUB ACTIVITY</div>
+        <div class="sec-line"></div>
+      </div>
+
+      <div id="gh-root" class="fade-in">
+        <div class="loading" id="gh-loading"><span class="loading-dots">Fetching GitHub data</span></div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ─────────────────────────────────────── -->
+    <section id="contact">
+      <div class="sec-header fade-in">
+        <div class="sec-num">06</div>
+        <div class="sec-title">// CONTACT</div>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="contact-grid fade-in">
+        <a class="contact-item" href="mailto:ajaykrishnan.g21@gmail.com">
+          <div class="c-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+          <div class="c-text">
+            <div class="c-label">EMAIL</div>
+            <div class="c-value">ajaykrishnan.g21@gmail.com</div>
+          </div>
+        </a>
+        <a class="contact-item" href="tel:+916238448078">
+          <div class="c-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
+          <div class="c-text">
+            <div class="c-label">PHONE</div>
+            <div class="c-value">+91 6238448078</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/ajaykg21" target="_blank" rel="noopener">
+          <div class="c-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
+          <div class="c-text">
+            <div class="c-label">LINKEDIN</div>
+            <div class="c-value">linkedin.com/in/ajaykg21</div>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="c-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+          <div class="c-text">
+            <div class="c-label">LOCATION</div>
+            <div class="c-value">Kottayam, Kerala, India</div>
           </div>
         </div>
       </div>
 
-      <!-- BCA -->
-      <div class="tl-item">
-        <div class="tl-dot" style="background:var(--neon2);box-shadow:0 0 10px var(--neon2),0 0 20px rgba(123,47,255,.3)"></div>
-        <div class="tl-card">
-          <div class="tl-role">Bachelor of Computer Application</div>
-          <div class="tl-company">Mar Kuriakose Arts &amp; Science College &mdash; Kottayam, Kerala</div>
-          <div class="tl-date">2019 &mdash; 2022 &nbsp;|&nbsp; CGPA: 7.1 / 10</div>
-          <ul class="tl-points">
-            <li>Core coursework in Java, PHP, JSP, and Web Application Development</li>
-            <li>Built foundational projects in computer applications and database management</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Java</span>
-            <span class="tag">PHP</span>
-            <span class="tag">JSP</span>
-            <span class="tag">MySQL</span>
+      <div class="contact-form-container fade-in" style="margin-top: 2.5rem;">
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <input type="text" id="cf-name" name="name" placeholder="Your Name" required class="cf-input" />
+            <input type="email" id="cf-email" name="email" placeholder="Your Email" required class="cf-input" />
           </div>
-        </div>
+          <textarea id="cf-message" name="message" placeholder="Your Message" rows="5" required
+            class="cf-input"></textarea>
+          <button type="submit" class="btn btn-primary" id="cf-submit" style="width: 100%;">$ send --message</button>
+        </form>
+        <div id="cf-status" class="cf-status"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── PROJECTS ────────────────────────────────────── -->
-  <section id="projects">
-    <div class="sec-header fade-in">
-      <div class="sec-num">04</div>
-      <div class="sec-title">// PROJECTS</div>
-      <div class="sec-line"></div>
-    </div>
-
-    <!-- Filter tabs -->
-    <div class="proj-filters fade-in" id="proj-filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-      <button class="filter-btn" data-filter="ai">AI / ML</button>
-      <button class="filter-btn" data-filter="backend">Backend</button>
-      <button class="filter-btn" data-filter="mobile">Mobile / Health</button>
-    </div>
-
-    <div class="projects-grid" id="projects-grid">
-
-      <!-- 1. Career Compass V2 -->
-      <div class="proj-card" data-cat="fullstack">
-        <div class="proj-card-top">
-          <div class="proj-cat-badge fullstack-badge">Full Stack</div>
-          <div class="proj-links">
-            <a href="https://github.com/akg-21/career_compass_v2_backend" target="_blank" rel="noopener" class="proj-link" title="Backend Repo"><i class="ti ti-brand-github"></i></a>
-            <a href="https://github.com/akg-21/career_compass__v2_frontend" target="_blank" rel="noopener" class="proj-link" title="Frontend Repo"><i class="ti ti-external-link"></i></a>
-          </div>
+    <!-- ── INTERACTIVE TERMINAL ─────────────────────────── -->
+    <div class="terminal-footer terminal-interactive fade-in" id="interactive-terminal">
+      <!-- Window chrome -->
+      <div class="term-chrome">
+        <div class="term-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
         </div>
-        <div class="proj-icon"><i class="ti ti-compass" aria-hidden="true"></i></div>
-        <div class="proj-name">Career Compass V2</div>
-        <div class="proj-desc">AI-powered career guidance &amp; job platform with separate frontend/backend architecture. Features authentication, job matching, and scalable REST APIs for real-world use.</div>
-        <div class="proj-tags">
-          <span class="ptag">React</span>
-          <span class="ptag">Node.js</span>
-          <span class="ptag">REST API</span>
-          <span class="ptag">Auth</span>
-          <span class="ptag">MySQL</span>
-        </div>
-        <div class="proj-stack">React &middot; Node.js &middot; Express &middot; MySQL</div>
+        <div class="term-title">ajay@portfolio: ~</div>
+        <div class="term-badge">bash</div>
       </div>
 
-      <!-- 2. Smart Waste Management + AI -->
-      <div class="proj-card" data-cat="ai">
-        <div class="proj-card-top">
-          <div class="proj-cat-badge ai-badge">AI / ML</div>
-          <div class="proj-links">
-            <a href="https://github.com/akg-21/waste_management_and-_complaints_with_severity_laravel_python" target="_blank" rel="noopener" class="proj-link" title="Main Repo"><i class="ti ti-brand-github"></i></a>
-            <a href="https://github.com/akg-21/Deep_Learning_project_Waste_Management" target="_blank" rel="noopener" class="proj-link" title="DL Model Repo"><i class="ti ti-external-link"></i></a>
-          </div>
-        </div>
-        <div class="proj-icon"><i class="ti ti-leaf" aria-hidden="true"></i></div>
-        <div class="proj-name">Smart Waste Management</div>
-        <div class="proj-desc">AI-integrated civic tech system for complaint severity prediction using deep learning. Laravel + Python hybrid architecture solves real-world waste management at scale.</div>
-        <div class="proj-tags">
-          <span class="ptag">Laravel</span>
-          <span class="ptag">Python</span>
-          <span class="ptag">Deep Learning</span>
-          <span class="ptag">NLP</span>
-          <span class="ptag">REST API</span>
-        </div>
-        <div class="proj-stack">Laravel &middot; Python &middot; TensorFlow &middot; MySQL</div>
-      </div>
+      <!-- Output history -->
+      <div class="term-history" id="term-history"></div>
 
-      <!-- 3. Multi-Level Affiliate Payout -->
-      <div class="proj-card" data-cat="backend">
-        <div class="proj-card-top">
-          <div class="proj-cat-badge backend-badge">Backend</div>
-          <div class="proj-links">
-            <a href="https://github.com/akg-21/multi_level_affiliate_payout_system" target="_blank" rel="noopener" class="proj-link" title="View Repo"><i class="ti ti-brand-github"></i></a>
-          </div>
-        </div>
-        <div class="proj-icon"><i class="ti ti-binary-tree" aria-hidden="true"></i></div>
-        <div class="proj-name">Multi-Level Affiliate Payout</div>
-        <div class="proj-desc">Complex financial system with recursive tree structures, commission calculation engine, wallet management, and multi-tier referral logic for affiliate networks.</div>
-        <div class="proj-tags">
-          <span class="ptag">Laravel</span>
-          <span class="ptag">Recursive Logic</span>
-          <span class="ptag">Wallet System</span>
-          <span class="ptag">DB Optimization</span>
-        </div>
-        <div class="proj-stack">Laravel &middot; MySQL &middot; PHP</div>
-      </div>
-
-      <!-- 4. Fall Detection / Health Monitoring -->
-      <div class="proj-card" data-cat="mobile">
-        <div class="proj-card-top">
-          <div class="proj-cat-badge mobile-badge">AI + Health</div>
-          <div class="proj-links">
-            <a href="https://github.com/akg-21/health_app_backend" target="_blank" rel="noopener" class="proj-link" title="Backend Repo"><i class="ti ti-brand-github"></i></a>
-            <a href="https://github.com/akg-21/health_app_frontend" target="_blank" rel="noopener" class="proj-link" title="Frontend Repo"><i class="ti ti-external-link"></i></a>
-          </div>
-        </div>
-        <div class="proj-icon"><i class="ti ti-heartbeat" aria-hidden="true"></i></div>
-        <div class="proj-name">Fall Detection &amp; Health Monitor</div>
-        <div class="proj-desc">Real-time AI health monitoring system with fall detection via camera/sensor integration. Sends instant alerts, tracks vitals, and provides a responsive frontend dashboard.</div>
-        <div class="proj-tags">
-          <span class="ptag">Node.js</span>
-          <span class="ptag">Python AI</span>
-          <span class="ptag">Real-time</span>
-          <span class="ptag">Alerts</span>
-          <span class="ptag">Camera API</span>
-        </div>
-        <div class="proj-stack">Node.js &middot; Python &middot; WebSockets &middot; AI</div>
-      </div>
-
-      <!-- 5. Spring Boot E-Commerce -->
-      <div class="proj-card" data-cat="backend">
-        <div class="proj-card-top">
-          <div class="proj-cat-badge backend-badge">Enterprise Java</div>
-          <div class="proj-links">
-            <a href="https://github.com/akg-21/Spring-Boot-Ecom" target="_blank" rel="noopener" class="proj-link" title="View Repo"><i class="ti ti-brand-github"></i></a>
-          </div>
-        </div>
-        <div class="proj-icon"><i class="ti ti-shopping-cart" aria-hidden="true"></i></div>
-        <div class="proj-name">Spring Boot E-Commerce</div>
-        <div class="proj-desc">Enterprise-grade Java e-commerce application with JWT authentication, complete product/order CRUD, and optimized REST APIs backed by MySQL — built with Spring Boot best practices.</div>
-        <div class="proj-tags">
-          <span class="ptag">Spring Boot</span>
-          <span class="ptag">Java</span>
-          <span class="ptag">JWT Auth</span>
-          <span class="ptag">REST API</span>
-          <span class="ptag">MySQL</span>
-        </div>
-        <div class="proj-stack">Spring Boot &middot; Java &middot; MySQL &middot; REST</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── GITHUB ACTIVITY ──────────────────────────────── -->
-  <section id="github">
-    <div class="sec-header fade-in">
-      <div class="sec-num">05</div>
-      <div class="sec-title">// GITHUB ACTIVITY</div>
-      <div class="sec-line"></div>
-    </div>
-
-    <div id="gh-root" class="fade-in">
-      <div class="loading" id="gh-loading"><span class="loading-dots">Fetching GitHub data</span></div>
-    </div>
-  </section>
-
-  <!-- ── CONTACT ─────────────────────────────────────── -->
-  <section id="contact">
-    <div class="sec-header fade-in">
-      <div class="sec-num">06</div>
-      <div class="sec-title">// CONTACT</div>
-      <div class="sec-line"></div>
-    </div>
-
-    <div class="contact-grid fade-in">
-      <a class="contact-item" href="mailto:ajaykrishnan.g21@gmail.com">
-        <div class="c-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
-        <div class="c-text">
-          <div class="c-label">EMAIL</div>
-          <div class="c-value">ajaykrishnan.g21@gmail.com</div>
-        </div>
-      </a>
-      <a class="contact-item" href="tel:+916238448078">
-        <div class="c-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
-        <div class="c-text">
-          <div class="c-label">PHONE</div>
-          <div class="c-value">+91 6238448078</div>
-        </div>
-      </a>
-      <a class="contact-item" href="https://linkedin.com/in/ajaykg21" target="_blank" rel="noopener">
-        <div class="c-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
-        <div class="c-text">
-          <div class="c-label">LINKEDIN</div>
-          <div class="c-value">linkedin.com/in/ajaykg21</div>
-        </div>
-      </a>
-      <div class="contact-item">
-        <div class="c-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
-        <div class="c-text">
-          <div class="c-label">LOCATION</div>
-          <div class="c-value">Kottayam, Kerala, India</div>
-        </div>
+      <!-- Input row -->
+      <div class="term-input-row" id="term-input-row">
+        <span class="prompt">ajay@portfolio:~$</span>
+        <input type="text" id="term-input" class="term-input" autocomplete="off" autocorrect="off" autocapitalize="off"
+          spellcheck="false" placeholder="type a command..." aria-label="Terminal input" />
       </div>
     </div>
 
-    <div class="contact-form-container fade-in" style="margin-top: 2.5rem;">
-      <form id="contact-form" class="contact-form">
-        <div class="form-row">
-          <input type="text" id="cf-name" name="name" placeholder="Your Name" required class="cf-input" />
-          <input type="email" id="cf-email" name="email" placeholder="Your Email" required class="cf-input" />
-        </div>
-        <textarea id="cf-message" name="message" placeholder="Your Message" rows="5" required class="cf-input"></textarea>
-        <button type="submit" class="btn btn-primary" id="cf-submit" style="width: 100%;">$ send --message</button>
-      </form>
-      <div id="cf-status" class="cf-status"></div>
-    </div>
-  </section>
+  </div><!-- /.port -->
 
-  <!-- ── INTERACTIVE TERMINAL ─────────────────────────── -->
-  <div class="terminal-footer terminal-interactive fade-in" id="interactive-terminal">
-    <!-- Window chrome -->
-    <div class="term-chrome">
-      <div class="term-dots">
-        <span class="dot dot-red"></span>
-        <span class="dot dot-yellow"></span>
-        <span class="dot dot-green"></span>
-      </div>
-      <div class="term-title">ajay@portfolio: ~</div>
-      <div class="term-badge">bash</div>
-    </div>
+  <!-- Tooltip for heatmap -->
+  <div class="tooltip" id="gh-tooltip"></div>
 
-    <!-- Output history -->
-    <div class="term-history" id="term-history"></div>
-
-    <!-- Input row -->
-    <div class="term-input-row" id="term-input-row">
-      <span class="prompt">ajay@portfolio:~$</span>
-      <input
-        type="text"
-        id="term-input"
-        class="term-input"
-        autocomplete="off"
-        autocorrect="off"
-        autocapitalize="off"
-        spellcheck="false"
-        placeholder="type a command..."
-        aria-label="Terminal input"
-      />
-    </div>
-  </div>
-
-</div><!-- /.port -->
-
-<!-- Tooltip for heatmap -->
-<div class="tooltip" id="gh-tooltip"></div>
-
-<script src="script.js"></script>
-<script src="github.js"></script>
+  <script src="script.js"></script>
+  <script src="github.js"></script>
 </body>
+
 </html>
