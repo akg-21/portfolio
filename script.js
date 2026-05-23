@@ -637,3 +637,52 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
   // ── Boot ─────────────────────────────────────────────
   boot();
 })();
+
+// ── Contact Form Submission ────────────────────────────
+(function ContactForm() {
+  const form = document.getElementById('contact-form');
+  const statusEl = document.getElementById('cf-status');
+  const submitBtn = document.getElementById('cf-submit');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('cf-name').value.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+    
+    if (!name || !email || !message) return;
+
+    submitBtn.textContent = '$ sending...';
+    submitBtn.disabled = true;
+    statusEl.className = 'cf-status';
+    statusEl.textContent = '';
+
+    try {
+      const BACKEND_URL = 'https://portfolio-backend-ten-zeta.vercel.app/api/message';
+      const response = await fetch(BACKEND_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        statusEl.textContent = '> Message sent successfully.';
+        statusEl.classList.add('success');
+        form.reset();
+      } else {
+        throw new Error(data.error || 'Failed to send message');
+      }
+    } catch (err) {
+      statusEl.textContent = '> Error: ' + err.message;
+      statusEl.classList.add('error');
+    } finally {
+      submitBtn.textContent = '$ send --message';
+      submitBtn.disabled = false;
+    }
+  });
+})();

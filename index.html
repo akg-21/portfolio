@@ -439,6 +439,18 @@
         </div>
       </div>
     </div>
+
+    <div class="contact-form-container fade-in" style="margin-top: 2.5rem;">
+      <form id="contact-form" class="contact-form">
+        <div class="form-row">
+          <input type="text" id="cf-name" name="name" placeholder="Your Name" required class="cf-input" />
+          <input type="email" id="cf-email" name="email" placeholder="Your Email" required class="cf-input" />
+        </div>
+        <textarea id="cf-message" name="message" placeholder="Your Message" rows="5" required class="cf-input"></textarea>
+        <button type="submit" class="btn btn-primary" id="cf-submit" style="width: 100%;">$ send --message</button>
+      </form>
+      <div id="cf-status" class="cf-status"></div>
+    </div>
   </section>
 
   <!-- ── INTERACTIVE TERMINAL ─────────────────────────── -->
