@@ -465,12 +465,7 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
         links: [['GitHub (main)', 'https://github.com/akg-21/waste_management_and-_complaints_with_severity_laravel_python'],
                 ['GitHub (DL model)', 'https://github.com/akg-21/Deep_Learning_project_Waste_Management']],
       },
-      {
-        name : 'Multi-Level Affiliate Payout',
-        stack: 'Laravel · MySQL · PHP',
-        desc : 'Recursive commission engine, wallet management & multi-tier referral logic.',
-        links: [['GitHub', 'https://github.com/akg-21/multi_level_affiliate_payout_system']],
-      },
+
       {
         name : 'Fall Detection & Health Monitor',
         stack: 'Node.js · Python · WebSockets · AI',

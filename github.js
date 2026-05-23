@@ -41,7 +41,9 @@
     };
 
     // Map GraphQL repo nodes → REST-like shape for buildRepos()
-    reposData = u.repositories.nodes.map(r => ({
+    reposData = u.repositories.nodes
+      .filter(r => r.name !== 'multi_level_affiliate_payout_system')
+      .map(r => ({
       name:             r.name,
       description:      r.description,
       html_url:         r.url,
