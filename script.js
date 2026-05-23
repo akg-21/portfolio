@@ -9,7 +9,7 @@
   const ctx = canvas.getContext('2d');
 
   function resize() {
-    canvas.width  = window.innerWidth;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
   resize();
@@ -45,8 +45,8 @@
 
 // ── Nav: active link on scroll + scrolled class ────
 const sections = document.querySelectorAll('section[id], div[id="top"]');
-const navLinks  = document.querySelectorAll('.nav-links a');
-const navEl     = document.querySelector('nav');
+const navLinks = document.querySelectorAll('.nav-links a');
+const navEl = document.querySelector('nav');
 
 function updateNav() {
   const scrollY = window.scrollY;
@@ -97,10 +97,11 @@ if (scrollTopBtn) {
 // ── Typing animation ───────────────────────────────
 const phrases = [
   'Full Stack Developer',
+  'Backend Engineer',
+  'DevOps Practitioner',
   'Laravel Specialist',
-  'Backend Architect',
-  'API Engineer',
-  'Problem Solver',
+  'API Architect',
+  'Database Optimizer',
   'Open to Opportunities'
 ];
 let pi = 0, ci = 0, deleting = false;
@@ -147,12 +148,12 @@ function animCount(id, target, dur, suffix = '+') {
   requestAnimationFrame(step);
 }
 animCount('cnt1', 2, 1600);
-animCount('cnt2', 5, 1900);
+animCount('cnt2', 20, 1900);
 animCount('cnt3', 20, 2200);
 
 // ── Project category filter ────────────────────────
 const filterBtns = document.querySelectorAll('.filter-btn');
-const projCards  = document.querySelectorAll('.proj-card');
+const projCards = document.querySelectorAll('.proj-card');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -189,8 +190,8 @@ document.querySelectorAll('.btn').forEach(btn => {
     const size = Math.max(rect.width, rect.height);
     r.style.cssText = `
       width:${size}px; height:${size}px;
-      left:${e.clientX - rect.left - size/2}px;
-      top:${e.clientY - rect.top  - size/2}px;
+      left:${e.clientX - rect.left - size / 2}px;
+      top:${e.clientY - rect.top - size / 2}px;
     `;
     this.appendChild(r);
     setTimeout(() => r.remove(), 600);
@@ -237,7 +238,7 @@ document.querySelectorAll('.tl-item, .proj-card').forEach(el => cardObs.observe(
 
 // ── Terminal footer: typewriter on scroll ──────────
 const termLines = document.querySelectorAll('.term-typed');
-const termObs   = new IntersectionObserver((entries) => {
+const termObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
     const lines = e.target.querySelectorAll('.term-line');

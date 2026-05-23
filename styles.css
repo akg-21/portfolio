@@ -170,6 +170,11 @@ nav.scrolled { border-bottom-color: rgba(0,255,231,.2); }
   font-size: 12.5px; line-height: 2;
   color: var(--text); max-width: 500px; margin-bottom: 2rem;
 }
+.hero-accent {
+  color: var(--neon);
+  text-shadow: 0 0 12px rgba(0,255,231,.35);
+  font-weight: 500;
+}
 
 .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
@@ -246,6 +251,11 @@ section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
 .skills-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
   gap: 0 2rem;
+}
+.skill-group-label {
+  font-size: 9px; letter-spacing: 2px; color: var(--neon);
+  margin-bottom: 1rem; padding-bottom: .4rem;
+  border-bottom: 1px solid var(--border);
 }
 .skill-item { margin-bottom: 1.2rem; }
 .skill-header {
