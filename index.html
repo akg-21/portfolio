@@ -1,314 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajay Krishnan G</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajay Krishnan G — Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Ajay Krishnan G, Full Stack Developer specializing in Laravel, Yii2, Python, and MySQL. Available for opportunities." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Ajay Krishnan G</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+<!-- Scanline overlay -->
+<div class="scanlines"></div>
+
+<!-- Animated grid background -->
+<canvas id="grid-canvas"></canvas>
+
+<!-- Scroll to top -->
+<button id="scroll-top" aria-label="Scroll to top">
+  <i class="ti ti-arrow-up"></i>
+</button>
+
+<div class="port" id="top">
+
+  <!-- ── NAV ─────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">&lt;AK/&gt;</div>
+    <div class="nav-links">
+      <a data-section="skills">skills</a>
+      <a data-section="exp">experience</a>
+      <a data-section="projects">projects</a>
+      <a data-section="contact">contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────── -->
+  <div class="hero">
+    <div class="hero-layout">
+
+      <!-- Profile photo with corner frame -->
+      <div class="hero-photo-col">
+        <div class="photo-frame">
+          <img src="ajay.jpeg" alt="Ajay Krishnan G — Full Stack Developer" class="hero-photo" />
         </div>
-    </nav>
+      </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="ajay.png" alt="Ajay Krishnan G">
-                </div>
-                <div class="hero-text">
-                    <h1 class="hero-title">Hi, I'm <span class="highlight">Ajay Krishnan G</span></h1>
-                    <h2 class="hero-subtitle">Full Stack Developer</h2>
-                    <p class="hero-description">Passionate developer with expertise in Laravel, React.js, and modern web
-                        technologies. Building scalable applications with clean code and best practices.</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/ajaykg21" target="_blank" class="social-link"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com" target="_blank" class="social-link"><i
-                                class="fab fa-github"></i></a>
-                        <a href="mailto:ajaykrishnan.g21@gmail.com" class="social-link"><i
-                                class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
+      <!-- Text content -->
+      <div class="hero-text-col">
+        <div class="hero-badge">// available for opportunities</div>
+        <div class="hero-name">AJAY<span>KRISHNAN</span><br>G</div>
+        <div class="hero-typed" id="typed-text"><span class="cursor-blink"></span></div>
+        <div class="hero-desc">
+          Full Stack Developer crafting scalable web applications with clean architecture.
+          2+ years turning complex problems into elegant digital solutions.
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a Full Stack Developer with 2+ years of experience building web applications using modern
-                        technologies. My expertise lies in developing RESTful APIs, optimizing databases, and creating
-                        responsive web applications.</p>
-                    <p>I'm passionate about writing clean, maintainable code and following MVC architecture principles.
-                        I enjoy solving complex problems and continuously learning new technologies to stay updated with
-                        industry trends.</p>
-                    <div class="about-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Kottayam, India</span>
-                    </div>
-                </div>
-                <div class="skills-grid">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">Laravel</span>
-                        <span class="skill-tag">Yii2</span>
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">JSP</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">REST API</span>
-                        <span class="skill-tag">MVC Architecture</span>
-                        <span class="skill-tag">Web Hosting</span>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:ajaykrishnan.g21@gmail.com">$ contact --me</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/ajaykg21" target="_blank" rel="noopener">$ view --linkedin</a>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Full Stack Developer</h3>
-                            <span class="timeline-company">Saiha Software Technologies Private Limited</span>
-                        </div>
-                        <div class="timeline-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Kochi, Kerala</span>
-                            <span class="timeline-date">2024 – Present</span>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Designed and developed RESTful APIs and backend logic using Laravel and Yii2 to enhance
-                                system scalability and performance</li>
-                            <li>Built and optimized MySQL databases to handle high data volumes efficiently</li>
-                            <li>Applied MVC architecture to ensure clean, maintainable, and modular code across multiple
-                                projects</li>
-                            <li>Conducted research and development (R&D) to explore new frameworks, tools, and
-                                optimization techniques</li>
-                            <li>Collaborated with designers and QA engineers to deliver secure, responsive, and
-                                high-performing web applications</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <strong>Tech Stack:</strong> Laravel, Yii2, MySQL, REST API, MVC Architecture, JavaScript,
-                            Python
-                        </div>
-                    </div>
-                </div>
+    <!-- Stats -->
+    <div class="hero-stats">
+      <div class="stat-box">
+        <div class="stat-num" id="cnt1">0</div>
+        <div class="stat-lbl">YEARS EXP</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="cnt2">0</div>
+        <div class="stat-lbl">PROJECTS</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="cnt3">0</div>
+        <div class="stat-lbl">TECH STACK</div>
+      </div>
+    </div>
+  </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Full Stack Web Developer (Freelance)</h3>
-                            <span class="timeline-company">Self Employed</span>
-                        </div>
-                        <div class="timeline-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Remote</span>
-                            <span class="timeline-date">2022 – 2024</span>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Designed and developed custom web applications for clients using Laravel, PHP, and JSP
-                            </li>
-                            <li>Managed full deployment cycle — from development to server configuration, hosting, and
-                                maintenance</li>
-                            <li>Managed and optimized MySQL databases for efficient data handling and performance</li>
-                            <li>Delivered high-quality, responsive web solutions tailored to client requirements</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <strong>Tech Stack:</strong> JSP, PHP, Laravel, MySQL, MVC Architecture, Web Hosting
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- ── SKILLS ─────────────────────────────────────── -->
+  <section id="skills">
+    <div class="sec-header fade-in">
+      <div class="sec-num">01</div>
+      <div class="sec-title">// TECH STACK</div>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="skills-grid fade-in">
+      <!-- Column 1 -->
+      <div>
+        <div class="skill-item">
+          <div class="skill-header"><span>Laravel / PHP</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="92"></div></div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <h3>Green Track</h3>
-                    <p>A comprehensive waste management system enabling administrators to assign collection duties and
-                        track waste metrics. Integrated predictive analytics to determine complaint severity and improve
-                        issue resolution.</p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Laravel</span>
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">MySQL</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-ambulance"></i>
-                    </div>
-                    <h3>Get Your Services</h3>
-                    <p>A location-based emergency services web application connecting users to nearby responders through
-                        real-time location APIs.</p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Laravel</span>
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">API</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>CSConnect</h3>
-                    <p>A portal for the college's Computer Science Association showcasing events, activities, and
-                        reports to improve student engagement.</p>
-                    <div class="project-tech">
-                        <span class="tech-badge">PHP</span>
-                        <span class="tech-badge">MySQL</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Let's Work</h3>
-                    <p>A job portal for job seekers and employers featuring job postings, application tracking, and
-                        automated notifications.</p>
-                    <div class="project-tech">
-                        <span class="tech-badge">PHP</span>
-                        <span class="tech-badge">MySQL</span>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-item">
+          <div class="skill-header"><span>MySQL</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="88"></div></div>
         </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Masters in Science</h3>
-                    <h4>Computer Science with Data Analytics</h4>
-                    <p class="education-institution">Rajagiri College of Social Sciences (Autonomous)</p>
-                    <p class="education-location">Kochi, Kerala</p>
-                    <p class="education-duration">2022 – 2024</p>
-                    <p class="education-gpa">CGPA: 6.5/10</p>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3>Bachelor of Computer Application</h3>
-                    <h4>Computer Application core with Java, PHP and JSP</h4>
-                    <p class="education-institution">Mar Kuriakose Arts & Science College</p>
-                    <p class="education-location">Kottayam, Kerala</p>
-                    <p class="education-duration">2019 – 2022</p>
-                    <p class="education-gpa">CGPA: 7.1/10</p>
-                </div>
-            </div>
-
-            <div class="certifications">
-                <h3>Certifications</h3>
-                <div class="cert-grid">
-                    <div class="cert-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Java (ICM Computers)</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Introduction to Web Development (Coursera)</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Machine Learning Foundations (Coursera)</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Mobile & Cloud Computing (Alison)</span>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-item">
+          <div class="skill-header"><span>Yii2</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="82"></div></div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">I'm always open to discussing new opportunities and interesting projects.</p>
-            <div class="contact-info">
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <a href="tel:+916238448078">+91 6238448078</a>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <a href="mailto:ajaykrishnan.g21@gmail.com">ajaykrishnan.g21@gmail.com</a>
-                </div>
-                <div class="contact-card">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/ajaykg21" target="_blank">linkedin.com/in/ajaykg21</a>
-                </div>
-            </div>
+        <div class="skill-item">
+          <div class="skill-header"><span>REST API</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar bar-neon" data-w="90"></div></div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Ajay Krishnan G. All rights reserved.</p>
+      </div>
+      <!-- Column 2 -->
+      <div>
+        <div class="skill-item">
+          <div class="skill-header"><span>JavaScript</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="78"></div></div>
         </div>
-    </footer>
+        <div class="skill-item">
+          <div class="skill-header"><span>Python</span><span class="skill-pct">72%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="72"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span>AWS</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="65"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span>Linux / Server Admin</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar bar-pink" data-w="75"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ── EXPERIENCE ──────────────────────────────────── -->
+  <section id="exp">
+    <div class="sec-header fade-in">
+      <div class="sec-num">02</div>
+      <div class="sec-title">// EXPERIENCE</div>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="timeline">
+      <!-- Job 1 -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-role">Full Stack Developer</div>
+          <div class="tl-company">Saiha Software Technologies Pvt. Ltd &mdash; Kochi</div>
+          <div class="tl-date">2024 &mdash; PRESENT</div>
+          <ul class="tl-points">
+            <li>Designed RESTful APIs &amp; backend logic with Laravel and Yii2</li>
+            <li>Built and optimized MySQL databases for high data volumes</li>
+            <li>Applied MVC architecture across multiple client projects</li>
+            <li>Conducted R&amp;D on new frameworks and optimization techniques</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">Yii2</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--neon2);box-shadow:0 0 10px var(--neon2),0 0 20px rgba(123,47,255,.3)"></div>
+        <div class="tl-card">
+          <div class="tl-role">Full Stack Web Developer</div>
+          <div class="tl-company">Freelance</div>
+          <div class="tl-date">2022 &mdash; 2024</div>
+          <ul class="tl-points">
+            <li>Built custom web applications using Laravel, PHP, and JSP</li>
+            <li>Managed full deployment &mdash; from dev to server config &amp; hosting</li>
+            <li>Delivered responsive solutions tailored to client requirements</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">JSP</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Hosting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ────────────────────────────────────── -->
+  <section id="projects">
+    <div class="sec-header fade-in">
+      <div class="sec-num">03</div>
+      <div class="sec-title">// PROJECTS</div>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="projects-grid">
+      <div class="proj-card">
+        <div class="proj-icon"><i class="ti ti-leaf" aria-hidden="true"></i></div>
+        <div class="proj-name">Green Track</div>
+        <div class="proj-desc">Comprehensive waste management system with predictive analytics for complaint severity and issue resolution.</div>
+        <div class="proj-stack">Laravel &middot; Python &middot; MySQL</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon"><i class="ti ti-ambulance" aria-hidden="true"></i></div>
+        <div class="proj-name">Get Your Services</div>
+        <div class="proj-desc">Location-based emergency services web app connecting users to nearby responders via real-time location APIs.</div>
+        <div class="proj-stack">Laravel &middot; Real-time API</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
+        <div class="proj-name">CSConnect</div>
+        <div class="proj-desc">College CS Association portal showcasing events, activities, and reports to boost student engagement.</div>
+        <div class="proj-stack">PHP &middot; MySQL</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
+        <div class="proj-name">Let's Work</div>
+        <div class="proj-desc">Full-featured job portal with postings, application tracking, and automated notifications for seekers and employers.</div>
+        <div class="proj-stack">PHP &middot; MySQL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ─────────────────────────────────────── -->
+  <section id="contact">
+    <div class="sec-header fade-in">
+      <div class="sec-num">04</div>
+      <div class="sec-title">// CONTACT</div>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="contact-grid fade-in">
+      <a class="contact-item" href="mailto:ajaykrishnan.g21@gmail.com">
+        <div class="c-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+        <div class="c-text">
+          <div class="c-label">EMAIL</div>
+          <div class="c-value">ajaykrishnan.g21@gmail.com</div>
+        </div>
+      </a>
+      <a class="contact-item" href="tel:+916238448078">
+        <div class="c-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
+        <div class="c-text">
+          <div class="c-label">PHONE</div>
+          <div class="c-value">+91 6238448078</div>
+        </div>
+      </a>
+      <a class="contact-item" href="https://linkedin.com/in/ajaykg21" target="_blank" rel="noopener">
+        <div class="c-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
+        <div class="c-text">
+          <div class="c-label">LINKEDIN</div>
+          <div class="c-value">linkedin.com/in/ajaykg21</div>
+        </div>
+      </a>
+      <div class="contact-item">
+        <div class="c-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+        <div class="c-text">
+          <div class="c-label">LOCATION</div>
+          <div class="c-value">Kottayam, Kerala, India</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TERMINAL FOOTER ─────────────────────────────── -->
+  <div class="terminal-footer fade-in term-typed">
+    <div class="terminal-body">
+      <div class="term-line">
+        <span class="prompt">ajay@portfolio:~$</span>&nbsp;
+        <span class="cmd">whoami</span>
+      </div>
+      <div class="term-line output">Full Stack Developer | Laravel &middot; Yii2 &middot; Python &middot; MySQL</div>
+
+      <div class="term-line" style="margin-top:.8rem">
+        <span class="prompt">ajay@portfolio:~$</span>&nbsp;
+        <span class="cmd">cat certs.txt</span>
+      </div>
+      <div class="term-line output">Java (ICM) &middot; Web Dev (Coursera) &middot; ML Foundations (Coursera) &middot; Mobile &amp; Cloud (Alison)</div>
+
+      <div class="term-line" style="margin-top:.8rem">
+        <span class="prompt">ajay@portfolio:~$</span>&nbsp;
+        <span class="cmd">echo &quot;Open to work!&quot;</span>&nbsp;
+        <span style="color:var(--neon)">&#9608;</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.port -->
+
+<script src="script.js"></script>
 </body>
-
 </html>
