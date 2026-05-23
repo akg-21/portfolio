@@ -331,18 +331,44 @@ section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
 .tag:hover { background: rgba(123,47,255,.2); color: #fff; }
 
 /* ─── PROJECTS ───────────────────────────────────── */
+
+/* Filter bar */
+.proj-filters {
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  margin-bottom: 1.8rem;
+}
+.filter-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 1.5px;
+  padding: 6px 16px; border-radius: 2px; cursor: pointer;
+  background: transparent; color: var(--muted);
+  border: 1px solid var(--border);
+  transition: color .2s, border-color .2s, background .2s, box-shadow .2s;
+}
+.filter-btn:hover {
+  color: var(--text); border-color: var(--muted);
+}
+.filter-btn.active {
+  color: var(--neon); border-color: rgba(0,255,231,.5);
+  background: rgba(0,255,231,.06);
+  box-shadow: 0 0 12px rgba(0,255,231,.15);
+}
+
+/* Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
   gap: 1.2rem;
 }
+
+/* Card */
 .proj-card {
   background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 4px; padding: 1.6rem; cursor: pointer;
+  border-radius: 4px; padding: 1.5rem; cursor: default;
   opacity: 0; transform: translateY(24px);
   transition: opacity .6s ease, transform .6s ease,
               border-color .3s, box-shadow .3s;
-  /* separate out the reveal transition from hover */
+  display: flex; flex-direction: column; gap: .4rem;
 }
 .proj-card.visible { opacity: 1; transform: translateY(0); }
 .proj-card:hover {
@@ -350,9 +376,41 @@ section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
   transform: translateY(-5px);
   box-shadow: 0 12px 36px rgba(255,45,120,.15);
 }
+
+/* Top row: badge + links */
+.proj-card-top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: .6rem;
+}
+
+/* Category badge */
+.proj-cat-badge {
+  font-size: 9px; letter-spacing: 1.5px; padding: 3px 10px;
+  border-radius: 2px; font-weight: 700;
+}
+.fullstack-badge { background: rgba(0,255,231,.1); color: var(--neon);   border: 1px solid rgba(0,255,231,.3); }
+.ai-badge        { background: rgba(123,47,255,.15); color: #b085ff;     border: 1px solid rgba(123,47,255,.4); }
+.backend-badge   { background: rgba(255,45,120,.1); color: var(--neon3); border: 1px solid rgba(255,45,120,.3); }
+.mobile-badge    { background: rgba(255,165,0,.1);  color: #ffaa44;      border: 1px solid rgba(255,165,0,.3); }
+
+/* GitHub / link icons */
+.proj-links { display: flex; gap: .5rem; }
+.proj-link {
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border); border-radius: 2px;
+  color: var(--muted); font-size: 14px; text-decoration: none;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.proj-link:hover {
+  color: var(--neon); border-color: rgba(0,255,231,.4);
+  background: rgba(0,255,231,.07);
+}
+
+/* Project icon */
 .proj-icon {
   font-size: 1.6rem; color: var(--neon3);
-  margin-bottom: 1rem;
+  margin-bottom: .4rem;
   display: inline-block;
   transition: transform .3s, text-shadow .3s;
 }
@@ -360,8 +418,20 @@ section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
   transform: scale(1.2) rotate(-5deg);
   text-shadow: 0 0 20px var(--neon3);
 }
-.proj-name { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: .5rem; }
-.proj-desc { font-size: 11px; color: var(--muted); line-height: 1.85; margin-bottom: 1rem; }
+
+.proj-name { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: .25rem; }
+.proj-desc { font-size: 11px; color: var(--muted); line-height: 1.85; flex: 1; }
+
+/* ptag chips */
+.proj-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: .5rem 0 .2rem; }
+.ptag {
+  font-size: 9px; padding: 3px 9px;
+  border: 1px solid rgba(123,47,255,.4); color: #b085ff;
+  border-radius: 2px; letter-spacing: 1px;
+  transition: background .2s, color .2s;
+}
+.ptag:hover { background: rgba(123,47,255,.2); color: #fff; }
+
 .proj-stack {
   font-size: 9.5px; color: var(--neon); letter-spacing: 1.5px;
   border-top: 1px solid var(--border); padding-top: .75rem; margin-top: auto;

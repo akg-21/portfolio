@@ -147,8 +147,38 @@ function animCount(id, target, dur, suffix = '+') {
   requestAnimationFrame(step);
 }
 animCount('cnt1', 2, 1600);
-animCount('cnt2', 4, 1900);
-animCount('cnt3', 15, 2200);
+animCount('cnt2', 5, 1900);
+animCount('cnt3', 20, 2200);
+
+// ── Project category filter ────────────────────────
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projCards  = document.querySelectorAll('.proj-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Update active button
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    projCards.forEach((card, i) => {
+      const match = filter === 'all' || card.dataset.cat === filter;
+      if (match) {
+        card.style.display = '';
+        setTimeout(() => {
+          card.classList.add('visible');
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, i * 80);
+      } else {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => { card.style.display = 'none'; }, 350);
+      }
+    });
+  });
+});
 
 // ── Button ripple effect ───────────────────────────
 document.querySelectorAll('.btn').forEach(btn => {

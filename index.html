@@ -192,34 +192,124 @@
       <div class="sec-line"></div>
     </div>
 
-    <div class="projects-grid">
-      <div class="proj-card">
+    <!-- Filter tabs -->
+    <div class="proj-filters fade-in" id="proj-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="ai">AI / ML</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="mobile">Mobile / Health</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- 1. Career Compass V2 -->
+      <div class="proj-card" data-cat="fullstack">
+        <div class="proj-card-top">
+          <div class="proj-cat-badge fullstack-badge">Full Stack</div>
+          <div class="proj-links">
+            <a href="https://github.com/akg-21/career_compass_v2_backend" target="_blank" rel="noopener" class="proj-link" title="Backend Repo"><i class="ti ti-brand-github"></i></a>
+            <a href="https://github.com/akg-21/career_compass__v2_frontend" target="_blank" rel="noopener" class="proj-link" title="Frontend Repo"><i class="ti ti-external-link"></i></a>
+          </div>
+        </div>
+        <div class="proj-icon"><i class="ti ti-compass" aria-hidden="true"></i></div>
+        <div class="proj-name">Career Compass V2</div>
+        <div class="proj-desc">AI-powered career guidance &amp; job platform with separate frontend/backend architecture. Features authentication, job matching, and scalable REST APIs for real-world use.</div>
+        <div class="proj-tags">
+          <span class="ptag">React</span>
+          <span class="ptag">Node.js</span>
+          <span class="ptag">REST API</span>
+          <span class="ptag">Auth</span>
+          <span class="ptag">MySQL</span>
+        </div>
+        <div class="proj-stack">React &middot; Node.js &middot; Express &middot; MySQL</div>
+      </div>
+
+      <!-- 2. Smart Waste Management + AI -->
+      <div class="proj-card" data-cat="ai">
+        <div class="proj-card-top">
+          <div class="proj-cat-badge ai-badge">AI / ML</div>
+          <div class="proj-links">
+            <a href="https://github.com/akg-21/waste_management_and-_complaints_with_severity_laravel_python" target="_blank" rel="noopener" class="proj-link" title="Main Repo"><i class="ti ti-brand-github"></i></a>
+            <a href="https://github.com/akg-21/Deep_Learning_project_Waste_Management" target="_blank" rel="noopener" class="proj-link" title="DL Model Repo"><i class="ti ti-external-link"></i></a>
+          </div>
+        </div>
         <div class="proj-icon"><i class="ti ti-leaf" aria-hidden="true"></i></div>
-        <div class="proj-name">Green Track</div>
-        <div class="proj-desc">Comprehensive waste management system with predictive analytics for complaint severity and issue resolution.</div>
-        <div class="proj-stack">Laravel &middot; Python &middot; MySQL</div>
+        <div class="proj-name">Smart Waste Management</div>
+        <div class="proj-desc">AI-integrated civic tech system for complaint severity prediction using deep learning. Laravel + Python hybrid architecture solves real-world waste management at scale.</div>
+        <div class="proj-tags">
+          <span class="ptag">Laravel</span>
+          <span class="ptag">Python</span>
+          <span class="ptag">Deep Learning</span>
+          <span class="ptag">NLP</span>
+          <span class="ptag">REST API</span>
+        </div>
+        <div class="proj-stack">Laravel &middot; Python &middot; TensorFlow &middot; MySQL</div>
       </div>
 
-      <div class="proj-card">
-        <div class="proj-icon"><i class="ti ti-ambulance" aria-hidden="true"></i></div>
-        <div class="proj-name">Get Your Services</div>
-        <div class="proj-desc">Location-based emergency services web app connecting users to nearby responders via real-time location APIs.</div>
-        <div class="proj-stack">Laravel &middot; Real-time API</div>
+      <!-- 3. Multi-Level Affiliate Payout -->
+      <div class="proj-card" data-cat="backend">
+        <div class="proj-card-top">
+          <div class="proj-cat-badge backend-badge">Backend</div>
+          <div class="proj-links">
+            <a href="https://github.com/akg-21/multi_level_affiliate_payout_system" target="_blank" rel="noopener" class="proj-link" title="View Repo"><i class="ti ti-brand-github"></i></a>
+          </div>
+        </div>
+        <div class="proj-icon"><i class="ti ti-binary-tree" aria-hidden="true"></i></div>
+        <div class="proj-name">Multi-Level Affiliate Payout</div>
+        <div class="proj-desc">Complex financial system with recursive tree structures, commission calculation engine, wallet management, and multi-tier referral logic for affiliate networks.</div>
+        <div class="proj-tags">
+          <span class="ptag">Laravel</span>
+          <span class="ptag">Recursive Logic</span>
+          <span class="ptag">Wallet System</span>
+          <span class="ptag">DB Optimization</span>
+        </div>
+        <div class="proj-stack">Laravel &middot; MySQL &middot; PHP</div>
       </div>
 
-      <div class="proj-card">
-        <div class="proj-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
-        <div class="proj-name">CSConnect</div>
-        <div class="proj-desc">College CS Association portal showcasing events, activities, and reports to boost student engagement.</div>
-        <div class="proj-stack">PHP &middot; MySQL</div>
+      <!-- 4. Fall Detection / Health Monitoring -->
+      <div class="proj-card" data-cat="mobile">
+        <div class="proj-card-top">
+          <div class="proj-cat-badge mobile-badge">AI + Health</div>
+          <div class="proj-links">
+            <a href="https://github.com/akg-21/health_app_backend" target="_blank" rel="noopener" class="proj-link" title="Backend Repo"><i class="ti ti-brand-github"></i></a>
+            <a href="https://github.com/akg-21/health_app_frontend" target="_blank" rel="noopener" class="proj-link" title="Frontend Repo"><i class="ti ti-external-link"></i></a>
+          </div>
+        </div>
+        <div class="proj-icon"><i class="ti ti-heartbeat" aria-hidden="true"></i></div>
+        <div class="proj-name">Fall Detection &amp; Health Monitor</div>
+        <div class="proj-desc">Real-time AI health monitoring system with fall detection via camera/sensor integration. Sends instant alerts, tracks vitals, and provides a responsive frontend dashboard.</div>
+        <div class="proj-tags">
+          <span class="ptag">Node.js</span>
+          <span class="ptag">Python AI</span>
+          <span class="ptag">Real-time</span>
+          <span class="ptag">Alerts</span>
+          <span class="ptag">Camera API</span>
+        </div>
+        <div class="proj-stack">Node.js &middot; Python &middot; WebSockets &middot; AI</div>
       </div>
 
-      <div class="proj-card">
-        <div class="proj-icon"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
-        <div class="proj-name">Let's Work</div>
-        <div class="proj-desc">Full-featured job portal with postings, application tracking, and automated notifications for seekers and employers.</div>
-        <div class="proj-stack">PHP &middot; MySQL</div>
+      <!-- 5. Spring Boot E-Commerce -->
+      <div class="proj-card" data-cat="backend">
+        <div class="proj-card-top">
+          <div class="proj-cat-badge backend-badge">Enterprise Java</div>
+          <div class="proj-links">
+            <a href="https://github.com/akg-21/Spring-Boot-Ecom" target="_blank" rel="noopener" class="proj-link" title="View Repo"><i class="ti ti-brand-github"></i></a>
+          </div>
+        </div>
+        <div class="proj-icon"><i class="ti ti-shopping-cart" aria-hidden="true"></i></div>
+        <div class="proj-name">Spring Boot E-Commerce</div>
+        <div class="proj-desc">Enterprise-grade Java e-commerce application with JWT authentication, complete product/order CRUD, and optimized REST APIs backed by MySQL — built with Spring Boot best practices.</div>
+        <div class="proj-tags">
+          <span class="ptag">Spring Boot</span>
+          <span class="ptag">Java</span>
+          <span class="ptag">JWT Auth</span>
+          <span class="ptag">REST API</span>
+          <span class="ptag">MySQL</span>
+        </div>
+        <div class="proj-stack">Spring Boot &middot; Java &middot; MySQL &middot; REST</div>
       </div>
+
     </div>
   </section>
 
