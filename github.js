@@ -51,9 +51,9 @@
       _langColor:       r.primaryLanguage?.color || null
     }));
 
-    // Cache the current-year calendar from this response
+    // Cache the current-year calendar only if it includes weekly breakdown
     const cal = u.contributionsCollection?.contributionCalendar;
-    if (cal) contribCache[currentYear] = cal;
+    if (cal?.weeks?.length) contribCache[currentYear] = cal;
   }
 
   // ── Fetch contribution calendar via backend proxy (cached per year) ─
