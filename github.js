@@ -31,27 +31,27 @@
 
     // Map to the shape the render functions expect
     userData = {
-      login:        USERNAME,
-      name:         u.name,
-      bio:          u.bio,
-      avatar_url:   u.avatarUrl,
+      login: USERNAME,
+      name: u.name,
+      bio: u.bio,
+      avatar_url: u.avatarUrl,
       public_repos: u.repositories.nodes.length,
-      followers:    0,
-      following:    0
+      followers: 0,
+      following: 0
     };
 
     // Map GraphQL repo nodes → REST-like shape for buildRepos()
     reposData = u.repositories.nodes
       .filter(r => r.name !== 'multi_level_affiliate_payout_system')
       .map(r => ({
-      name:             r.name,
-      description:      r.description,
-      html_url:         r.url,
-      stargazers_count: r.stargazerCount,
-      forks_count:      r.forkCount || 0,
-      language:         r.primaryLanguage?.name || null,
-      _langColor:       r.primaryLanguage?.color || null
-    }));
+        name: r.name,
+        description: r.description,
+        html_url: r.url,
+        stargazers_count: r.stargazerCount,
+        forks_count: r.forkCount || 0,
+        language: r.primaryLanguage?.name || null,
+        _langColor: r.primaryLanguage?.color || null
+      }));
 
     // Cache the current-year calendar only if it includes weekly breakdown
     const cal = u.contributionsCollection?.contributionCalendar;
@@ -235,7 +235,7 @@
 
       attachTooltips();
     } catch (err) {
-      if (loading) loading.innerHTML = `<div class="error-msg">Could not load GitHub data — token may have expired or lacks permissions.</div>`;
+      if (loading) loading.innerHTML = `<div class="error-msg">An error occurred while loading the details.</div>`;
     }
   }
 
