@@ -2,45 +2,87 @@
    script.js — Portfolio interactivity
    ───────────────────────────────────────────────── */
 
-// ── Grid canvas background ─────────────────────────
-(function drawGrid() {
+// ── Interactive Particle Background ────────────────
+(function initParticles() {
   const canvas = document.getElementById('grid-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  
+  let W, H, particles = [], mouse = { x: -999, y: -999 };
 
   function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
   }
   resize();
   window.addEventListener('resize', resize);
 
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const step = 50;
-    ctx.strokeStyle = 'rgba(0,255,231,0.06)';
-    ctx.lineWidth = 1;
-
-    for (let x = 0; x <= canvas.width; x += step) {
-      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
-    }
-    for (let y = 0; y <= canvas.height; y += step) {
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
-    }
-
-    // Random glitch dots
-    ctx.fillStyle = 'rgba(0,255,231,0.3)';
-    for (let i = 0; i < 6; i++) {
-      if (Math.random() > 0.7) {
-        const gx = Math.floor(Math.random() * (canvas.width / step)) * step;
-        const gy = Math.floor(Math.random() * (canvas.height / step)) * step;
-        ctx.fillRect(gx - 1, gy - 1, 2, 2);
-      }
-    }
+  function Particle() {
+    this.x = Math.random() * W;
+    this.y = Math.random() * H;
+    this.vx = (Math.random() - 0.5) * 0.4;
+    this.vy = (Math.random() - 0.5) * 0.4;
+    this.r = Math.random() * 2 + 1;
   }
+  
+  // Create fewer particles on smaller screens to keep performance smooth, max 80
+  const numParticles = Math.min(80, Math.floor(window.innerWidth / 15));
+  for (let i = 0; i < numParticles; i++) particles.push(new Particle());
 
-  draw();
-  setInterval(draw, 2000); // re-draw dots occasionally for glitch feel
+  function drawParticles() {
+    ctx.clearRect(0, 0, W, H);
+    
+    particles.forEach(p => {
+      p.x += p.vx; 
+      p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(0, 255, 231, 0.6)';
+      ctx.fill();
+    });
+    
+    particles.forEach((a, i) => {
+      // Connect to other particles
+      particles.slice(i + 1).forEach(b => {
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(0, 255, 231, ${(1 - dist / 100) * 0.15})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      });
+      
+      // Connect to mouse pointer
+      const mx = a.x - mouse.x, my = a.y - mouse.y;
+      const md = Math.sqrt(mx * mx + my * my);
+      if (md < 150) {
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.strokeStyle = `rgba(0, 255, 231, ${(1 - md / 150) * 0.35})`;
+        ctx.lineWidth = 0.6;
+        ctx.stroke();
+      }
+    });
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+
+  document.addEventListener('mousemove', e => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+  document.addEventListener('mouseleave', () => {
+    mouse.x = -999;
+    mouse.y = -999;
+  });
 })();
 
 // ── Nav: active link on scroll + scrolled class ────
@@ -681,3 +723,29 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
     }
   });
 })();
+
+// ── 3D Tilt Effect on Hover ────────────────────────
+const tiltCards = document.querySelectorAll('.proj-card, .tl-card');
+tiltCards.forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = ((y - centerY) / centerY) * -5;
+    const rotateY = ((x - centerX) / centerX) * 5;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    card.style.transition = 'none';
+    card.style.zIndex = '10';
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+    card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease';
+    card.style.zIndex = '1';
+  });
+});
