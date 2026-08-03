@@ -226,8 +226,9 @@
         ${buildHeatmapCard(cal, currentYear)}
 
         <div class="sec-header" style="margin-top:2rem">
-          <div class="sec-num"></div>
-          <div class="sec-title" style="font-size:.9rem">// RECENT REPOS</div>
+          <div class="sec-title" style="font-size:.9rem">
+            <span class="prompt-host">ajay@portfolio</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span><span class="prompt-cmd" style="font-size:.9rem">ls repos/</span>
+          </div>
           <div class="sec-line"></div>
         </div>
 

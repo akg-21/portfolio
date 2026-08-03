@@ -4,6 +4,9 @@
 
 // ── Interactive Particle Background ────────────────
 (function initParticles() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
   const canvas = document.getElementById('grid-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -151,6 +154,13 @@ let pi = 0, ci = 0, deleting = false;
 function type() {
   const el = document.getElementById('typed-text');
   if (!el) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    el.innerHTML = 'Full Stack Developer &amp; Backend Engineer';
+    return;
+  }
+
   const phrase = phrases[pi];
 
   if (!deleting) {
@@ -179,6 +189,13 @@ setTimeout(type, 800);
 function animCount(id, target, dur, suffix = '+') {
   const el = document.getElementById(id);
   if (!el) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    el.textContent = target + suffix;
+    return;
+  }
+
   let start = null;
   function step(ts) {
     if (!start) start = ts;
@@ -242,6 +259,8 @@ document.querySelectorAll('.btn').forEach(btn => {
 
 // ── IntersectionObserver for scroll animations ─────
 const obs = new IntersectionObserver((entries) => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   entries.forEach(e => {
     if (!e.isIntersecting) return;
     const el = e.target;
@@ -252,15 +271,21 @@ const obs = new IntersectionObserver((entries) => {
       b.style.width = b.dataset.w + '%';
     });
 
-    // Staggered fade for timeline items
-    el.querySelectorAll('.tl-item').forEach((item, i) => {
-      setTimeout(() => item.classList.add('visible'), i * 180);
-    });
+    if (prefersReducedMotion) {
+      el.querySelectorAll('.tl-item, .proj-card').forEach(item => {
+        item.classList.add('visible');
+      });
+    } else {
+      // Staggered fade for timeline items
+      el.querySelectorAll('.tl-item').forEach((item, i) => {
+        setTimeout(() => item.classList.add('visible'), i * 180);
+      });
 
-    // Staggered fade for project cards
-    el.querySelectorAll('.proj-card').forEach((card, i) => {
-      setTimeout(() => card.classList.add('visible'), i * 130);
-    });
+      // Staggered fade for project cards
+      el.querySelectorAll('.proj-card').forEach((card, i) => {
+        setTimeout(() => card.classList.add('visible'), i * 130);
+      });
+    }
   });
 }, { threshold: 0.08 });
 
