@@ -433,7 +433,7 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
     line('// ABOUT AJAY KRISHNAN G', 'out-section');
     sep();
     line('Full Stack Developer with a passion for backend engineering & DevOps.', 'output');
-    line('2+ years shipping production-grade systems across Laravel, Node.js, and Python.', 'output');
+    line('2+ years shipping production-grade systems across Laravel, Spring Boot, Node.js, and Python.', 'output');
     blank();
     line('Philosophy: clean APIs, lean databases, and zero-downtime deployments.', 'output');
     blank();
@@ -458,9 +458,9 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
     const groups = [
       ['Backend & Frameworks', [
         ['Laravel / PHP', 92],
-        ['Yii2', 82],
+        ['Yii2', 72],
         ['Node.js / Express', 76],
-        ['Spring Boot / Java', 70],
+        ['Spring Boot / Java', 85],
         ['REST API / MVC', 90],
       ]],
       ['Database, DevOps & Tools', [
