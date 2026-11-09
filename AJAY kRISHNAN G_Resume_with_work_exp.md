@@ -3,7 +3,9 @@ Kottayam, India | P: \+91 6238448078 | ajaykrishnan.g21@gmail.com | linkedin.com
 
 **EXPERIENCE**	
 
-**FULL STACK DEVELOPER** **Saiha Software Technologies Private Limited – Kochi, Kerela**	*2024 – Present*
+**BACKEND DEVELOPER** **Tecforz Innovations Private Limited**	*Nov 2026 – Present*
+
+**FULL STACK DEVELOPER** **Saiha Software Technologies Private Limited – Kochi, Kerela**	*2024 – Nov 2026*
 
 * Designed and developed RESTful APIs and backend logic using Laravel and Yii2 to enhance system scalability and performance.  
 * Built and optimized MySQL databases to handle high data volumes efficiently.  

@@ -437,7 +437,7 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
     blank();
     line('Philosophy: clean APIs, lean databases, and zero-downtime deployments.', 'output');
     blank();
-    line('Currently: Full Stack Developer @ Saiha Software Technologies — Kochi', 'output');
+    line('Currently: Backend Developer @ Tecforz Innovations Pvt. Ltd.', 'output');
     line('MSc Computer Science with Data Analytics — Rajagiri College, 2024', 'output');
     sep();
   }
@@ -492,9 +492,13 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
     sep();
     line('// EXPERIENCE', 'out-section');
     sep();
+    line('Backend Developer', 'out-success');
+    line('Tecforz Innovations Pvt. Ltd.', 'output');
+    line('Nov 2026 — PRESENT', 'out-dim');
+    blank();
     line('Full Stack Developer', 'out-success');
     line('Saiha Software Technologies Pvt. Ltd — Kochi', 'output');
-    line('2024 — PRESENT', 'out-dim');
+    line('2024 — Nov 2026', 'out-dim');
     [
       'Built RESTful APIs & backend logic with Laravel and Yii2',
       'Optimized MySQL databases for high-volume data handling',

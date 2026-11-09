@@ -16,7 +16,7 @@ The website is structured as a responsive single-page application containing the
 
 1. **Hero**: A modern terminal-inspired introduction featuring a typing effect, high-level summary, and call-to-action buttons.
 2. **Skills**: A detailed breakdown of my technical proficiencies categorized into "Backend & Frameworks" and "Database, DevOps & Tools" with visual progress bars.
-3. **Experience**: An interactive timeline detailing my professional history, including my current role as a Full Stack Developer at Saiha Software Technologies and my past freelance experience.
+3. **Experience**: An interactive timeline detailing my professional history, including my current role as a Backend Developer at Tecforz Innovations Pvt. Ltd., my previous role as a Full Stack Developer at Saiha Software Technologies, and my past freelance experience.
 4. **Education**: Academic background showcasing my Master of Science in Computer Science with Data Analytics and my Bachelor of Computer Application.
 5. **Projects**: A dynamic, filterable grid of my featured work spanning across Full Stack, AI/ML, Backend, and Mobile/Health categories. Featured projects include:
    - **Career Compass V2**: AI-powered career guidance platform (React, Node.js, MySQL).
