@@ -445,7 +445,7 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
   function cmdWhoami() {
     sep();
     line('Ajay Krishnan G — Full Stack Developer', 'out-success');
-    line('Backend &middot; DevOps &middot; Laravel &middot; Node.js &middot; MySQL', 'output');
+    line('Backend &middot; DevOps &middot; Laravel &middot; Spring Boot &middot; Node.js &middot; MySQL', 'output');
     line('Location: Kottayam, Kerala, India', 'out-dim');
     line('Status: <span style="color:#28c840">● Available for opportunities</span>', 'output');
     sep();

@@ -48,6 +48,6 @@ A job portal for job seekers and employers featuring job postings, application t
 
 **ADDITIONAL**	
 
-**Technical Skills:** Cursor**,** Antigravity**,** Git, Bitbucket, REST API, MVC Architecture, MySQL, Web Hosting & Deployment, Linux & Server Administration, PHP, Laravel, Yii2, JSP, JavaScript, AWS, Python, HTML/CSS,   
+**Technical Skills:** Cursor**,** Antigravity**,** Git, Bitbucket, REST API, MVC Architecture, MySQL, Web Hosting & Deployment, Linux & Server Administration, PHP, Laravel, Yii2, Java, Spring Boot, JSP, JavaScript, AWS, Python, HTML/CSS,   
 **Languages:** Fluent in English; Conversational in Malayalam  
 **Certifications:** Java (ICM Computers), Introduction to Web Development (Coursera), Machine Learning Foundations (Coursera), Mobile & Cloud Computing (Alison)  
