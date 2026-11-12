@@ -43,7 +43,7 @@
       
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(0, 255, 231, 0.6)';
+      ctx.fillStyle = 'rgba(45, 212, 191, 0.5)';
       ctx.fill();
     });
     
@@ -56,7 +56,7 @@
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(0, 255, 231, ${(1 - dist / 100) * 0.15})`;
+          ctx.strokeStyle = `rgba(45, 212, 191, ${(1 - dist / 100) * 0.12})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -69,7 +69,7 @@
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(mouse.x, mouse.y);
-        ctx.strokeStyle = `rgba(0, 255, 231, ${(1 - md / 150) * 0.35})`;
+        ctx.strokeStyle = `rgba(45, 212, 191, ${(1 - md / 150) * 0.25})`;
         ctx.lineWidth = 0.6;
         ctx.stroke();
       }
@@ -764,10 +764,10 @@ tiltCards.forEach(card => {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     
-    const rotateX = ((y - centerY) / centerY) * -5;
-    const rotateY = ((x - centerX) / centerX) * 5;
+    const rotateX = ((y - centerY) / centerY) * -1.5;
+    const rotateY = ((x - centerX) / centerX) * 1.5;
     
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1, 1, 1)`;
     card.style.transition = 'none';
     card.style.zIndex = '10';
   });
