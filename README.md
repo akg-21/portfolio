@@ -23,6 +23,8 @@ The website is structured as a responsive single-page application containing the
    - **Green Track**: Smart Waste Management AI system predicting complaint severities (Laravel, Python/Flask, Scikit-learn, NLP).
    - **Fall Detection & Health Monitor**: Real-time AI health monitoring (Node.js, Python, WebSockets).
    - **Spring Boot E-Commerce**: Enterprise Java backend for an e-commerce platform.
+   - **Get Your Services**: Location-based emergency services app (Laravel, REST APIs).
+   - **Patient Queue Management System**: Clinic queue and token management (Spring Boot, MySQL, React).
 6. **GitHub**: A live GitHub contribution heatmap and statistics integration fetching real-time data from a custom backend API.
 7. **Contact**: Links to reach out via Email, LinkedIn, and GitHub.
 

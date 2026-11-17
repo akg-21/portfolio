@@ -530,9 +530,9 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
                 ['GitHub (frontend)', 'https://github.com/akg-21/career_compass__v2_frontend']],
       },
       {
-        name : 'Smart Waste Management',
-        stack: 'Laravel · Python · TensorFlow · MySQL',
-        desc : 'AI civic-tech system for complaint severity prediction via deep learning.',
+        name : 'Green Track',
+        stack: 'Spring Boot · Python · MySQL · Flutter',
+        desc : 'Waste management platform with ML-based complaint severity prediction.',
         links: [['GitHub (main)', 'https://github.com/akg-21/waste_management_and-_complaints_with_severity_laravel_python'],
                 ['GitHub (DL model)', 'https://github.com/akg-21/Deep_Learning_project_Waste_Management']],
       },
@@ -549,6 +549,19 @@ document.querySelector('.nav-logo')?.addEventListener('click', () => {
         stack: 'Spring Boot · Java · MySQL · REST',
         desc : 'Enterprise e-commerce with JWT auth, CRUD, and optimized REST APIs.',
         links: [['GitHub', 'https://github.com/akg-21/Spring-Boot-Ecom']],
+      },
+      {
+        name : 'Get Your Services',
+        stack: 'Laravel · REST APIs',
+        desc : 'Location-based emergency services app connecting users to nearby responders.',
+        links: [],
+      },
+      {
+        name : 'Patient Queue Management System',
+        stack: 'Spring Boot · React · MySQL · REST',
+        desc : 'Clinic queue & token management: Spring Boot API with a React UI.',
+        links: [['GitHub (API)', 'https://github.com/akg-21/queue-management-api'],
+                ['GitHub (UI)', 'https://github.com/akg-21/queue-management-ui']],
       },
     ];
     projs.forEach((p, i) => {
